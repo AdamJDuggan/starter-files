@@ -30,7 +30,7 @@ of the two given arrays, but not both. In other words, return the symmetric diff
 _______________- ____________________________________________________________
 */
 // This was really hard! Amazing it is summed up in such a few lines.
-// Add (concat) the two arrays together. For each item (j) in the new long // array;filter out the ones which are not(!) included (includes) in both //arr1 and arr2.
+// Add (concat) the two arrays together. For each item (j) in the new long // array;filter out the ones which are not(!) included (includes) in either arr1 and arr2.
 function diffArray(arr1, arr2) {
   return arr1.concat(arr2).filter(
     j => !arr1.includes(j) || !arr2.includes(j)
@@ -135,9 +135,7 @@ ___________________________________________________________________________
 */
 
 // I nearly got there with this one! I knew I wanted to end with to a simple...
-// return str.replace(before, after)
-// ...as this is a clean line of code. But I needed some help to get the
-// first letter case check and convert. I was surprissed that noone found a short way to do this. The 'advanced'answers were longer than this simple version!I am sure there will be a clean code way to do this is two lines using regex and latest Javascript methods?
+// return str.replace(before, after) ...as this is a clean line of code. But I needed some help to get the first letter case check and convert. I was surprissed that noone found a short way to do this. The 'advanced'answers were longer than this simple version!I am sure there will be a clean code way to do this is two lines using regex and latest Javascript methods?
 
 function myReplace(str, before, after) {
   // Find where before is in str
@@ -250,7 +248,7 @@ const euros = [29.76, 41.85, 46.5];
 const sum = euros.reduce((total, amount) => total + amount);
 sum // 118.11
 
-// Create a tally with reduce()
+// Create a tally with rebothduce()
 const fruitBasket = ['banana', 'cherry', 'orange', 'apple', 'cherry', 'orange', 'apple', 'banana', 'cherry', 'orange', 'fig' ];
 const count = fruitBasket.reduce( (tally, fruit) => {
   tally[fruit] = (tally[fruit] || 0) + 1 ;
