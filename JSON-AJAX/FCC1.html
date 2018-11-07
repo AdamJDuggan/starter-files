@@ -1,0 +1,134 @@
+<!--
+Notes on API data transfer formats: 
+Most web APIs transfer data in a format called JSON. JSON stands for JavaScript Object Notation.
+JSON syntax looks very similar to JavaScript object literal notation. JSON has object properties and their current values, sandwiched between a { and a }.These properties and their values are often referred to as "key-value pairs". However, JSON transmitted by APIs are sent as bytes, and your application receives it as a string. These can be converted into JavaScript objects, but they are not JavaScript objects by default. The JSON.parse method parses the string and constructs the JavaScript object described by it. You can request the JSON from freeCodeCamp's Cat Photo API. Here's the code you can put in your click event to do this:
+-->
+
+<script>
+  document.addEventListener('DOMContentLoaded',function(){
+    document.getElementById('getMessage').onclick=function(){
+    //First, an instance of the XMLHttpRequest object is created and saved in the req variable.  
+    req=new XMLHttpRequest();
+    //Next, the open method initializes a request - this example is requesting data from an API, therefore is a "GET" request. The second argument for open is the URL of the API you are requesting data from. The third argument is a Boolean value where true makes it an asynchronous request.
+    req.open("GET",'/json/cats.json',true);
+    //The send method sends the request. 
+    req.send();
+    //Finally, the onload event handler parses the returned data and applies the JSON.stringify method to convert the JavaScript object into a string. This string is then inserted as the message text.
+    req.onload=function(){
+    json=JSON.parse(req.responseText);
+    //  You can use a forEach method to loop through the data since the cat photo objects are held in an array. As you get to each item, you can modify the HTML elements.First, declare an html variable with var html = "";. 
+    var html = "";
+    //Then, loop through the JSON, adding HTML to the variable that wraps the key names in strong tags, followed by the value. When the loop is finished, you render it.
+   json.forEach(function(val) {
+  var keys = Object.keys(val);
+  html += "<div class = 'cat'>";
+    keys.forEach(function(key) {
+    html += "<strong>" + key + "</strong>: " + val[key] + "<br>";
+  });
+  html += "</div><br>";
+});      
+        // Add your code above this line
+        document.getElementsByClassName('message')[0].innerHTML=html;
+      };
+    };
+  });
+</script>
+<style>
+  body {
+    text-align: center;
+    font-family: "Helvetica", sans-serif;
+  }
+  h1 {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  .box {
+    border-radius: 5px;
+    background-color: #eee;
+    padding: 20px 5px;
+  }
+  button {
+    color: white;
+    background-color: #4791d0;
+    border-radius: 5px;
+    border: 1px solid #4791d0;
+    padding: 5px 10px 8px 10px;
+  }
+  button:hover {
+    background-color: #0F5897;
+    border: 1px solid #0F5897;
+  }
+</style>
+
+<h1>Cat Photo Finder</h1> 
+<p class="message box">
+  The message will go here
+</p>
+<p>
+  <button id="getMessage">
+    Get Message
+  </button>
+</p>
+
+
+<script>
+//Adding images...
+//When you're looping through these objects, you can use this imageLink property to display this image in an img element.
+html += "<img src = '" + val.imageLink + "' " + "alt='" + val.altText + "'>";
+//If you don't want to render every cat photo you get from the freeCodeCamp Cat Photo API, you can pre-filter the JSON before looping through it. Given that the JSON data is stored in an array, you can use the filter method to filter out the cat whose "id" key has a value of 1.
+json = json.filter(function(val) {
+  return (val.id !== 1);
+});
+
+</script>
+
+
+<script>
+//Get Geolocation Data to Find A User's GPS Coordinates
+//Another cool thing you can do is access your user's current location. Every browser has a built in navigator that can give you this information. The navigator will get the user's current longitude and latitude. You will see a prompt to allow or block this site from knowing your current location. The challenge can be completed either way, as long as the code is correct. By selecting allow, you will see the text on the output phone change to your latitude and longitude. 
+
+//First, it checks if the navigator.geolocation object exists. If it does, the getCurrentPosition method on that object is called, which initiates an asynchronous request for the user's position. If the request is successful, the callback function in the method runs. This function accesses the position object's values for latitude and longitude using dot notation and updates the HTML.
+if (navigator.geolocation){
+  navigator.geolocation.getCurrentPosition(function(position) {
+    document.getElementById('data').innerHTML="latitude: "+ position.coords.latitude + "<br>longitude: " + position.coords.longitude;
+  });
+}
+</script>
+<h4>You are here:</h4>
+<div id="data">
+
+</div>
+
+
+<!--
+JSON APIs and Ajax: Post Data with the JavaScript XMLHttpRequest Method
+In the previous examples, you received data from an external resource. You can also send data to an external resource, as long as that resource supports AJAX requests and you know the URL.
+JavaScript's XMLHttpRequest method is also used to post data to a server. Here's an example:
+-->
+
+<script>
+    
+
+
+  document.addEventListener('DOMContentLoaded',function(){
+    document.getElementById('sendMessage').onclick=function(){  
+    var userName=document.getElementById('name').value;
+    req=new XMLHttpRequest();
+    //Here the open method initializes the request as a "POST" to the given URL of the external resource, and uses the true Boolean to make it asynchronous.
+    req.open("POST",url,true);
+    //The setRequestHeader method sets the value of an HTTP request header, which contains information about the sender and the request. It must be called after the open method, but before the send method. The two parameters are the name of the header and the value to set as the body of that header.
+    req.setRequestHeader('Content-Type','text/plain');
+    //Next, the onreadystatechange event listener handles a change in the state of the request. A readyState of 4 means the operation is complete, and a status of 200 means it was a successful request. The document's HTML can be updated.
+    req.onreadystatechange=function(){
+    if(req.readyState==4 && req.status==200){
+        document.getElementsByClassName('message')[0].innerHTML=req.responseText;
+  }
+};
+    //Finally, the send method sends the request with the userName value, which was given by the user in the input field.
+    req.send(userName);
+    };
+  });
+</script>
+
+
+

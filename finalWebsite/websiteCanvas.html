@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Brighton Angular Developer</title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Font aswome -->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+<!-- Devicon icons for programming languages -->
+<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+<!--CSS -->
+<link rel="stylesheet" href="website2.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+<!--NAV BAR STARTS-->
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark mr-auto bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+  <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="font: 400 15px monospace;">
+  <li class="nav-item">
+  <a href="website2.html" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+  </li>
+  <li class="nav-item">
+  <a href="websiteDOMChristmasTree.html" class="nav-link" href="#aboutSection">DOM</a>
+  </li>
+  <li class="nav-item">
+  <a class="nav-link" href="#skillsSection">Jquery</a>
+  </li>
+  <li class="nav-item active">
+    <a href="websiteCanvas.html" class="nav-link" href="#portfolioSection">Canvas</a>
+    </li>
+  <li class="nav-item">
+  <a href="websiteAlgorithms.html" class="nav-link" href="#footerSection">Algorithms</a>
+  </li>
+  <li class="nav-item">
+    <a href="websiteForm.html" class="nav-link" href="#footerSection">Forms</a>
+    </li>
+    <li class="nav-item">
+      <a href="websiteAJAX1.html" class="nav-link" href="#footerSection">AJAX</a>
+      </li>
+  </ul>
+  </div>
+  </nav>
+  <!--NAVBAR ENDS-->
+
+  
+
+
+<canvas id="draw" width="400" height="8400" border="1px solid black;"></canvas>
+<script>
+const canvas = document.querySelector('#draw');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+ctx.strokeStyle = '#BADA55';
+ctx.lineJoin = 'round';
+ctx.lineCap = 'round';
+ctx.lineWidth = 60;
+//this blends the colors//
+// ctx.globalCompositeOperation = 'multiply'
+
+let isDrawing = false; //this stops the cursor drawing when you let go of the button
+let lastX = 0; //where you start and end the line
+let lastY = 0;
+let hue = 0;
+let direction = true;
+
+function draw(e){
+  if(!isDrawing) return;  //stop the function from running when user is not mouse down
+  console.log(e);
+  ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+  ctx.beginPath();
+  ctx.moveTo(lastX, lastY);
+  ctx.lineTo(e.offsetX, e.offsetY);
+  ctx.stroke();
+  //destructuring an array//
+  [lastX, lastY] = [e.offsetX, e.offsetY];
+  //increments the color//
+
+  hue++;
+
+  if (hue >= 360){
+    hue = 0;
+  }
+  if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1){
+    direction = !direction;
+  }
+
+  if (direction){
+    ctx.lineWidth++;
+  } else{
+    ctx.lineWidth--;
+  }
+}
+
+
+// mouse down happens before mouse move//
+canvas.addEventListener('mousedown', (e) =>{
+  isDrawing = true;
+  [lastX, lastY] = [e.offsetX, e.offsetY];
+});
+canvas.addEventListener('mousemove', draw); //when i move my mouse on the canvas it is going to console log draw.
+canvas.addEventListener('mouseup', () => isDrawing = false);
+canvas.addEventListener('mouseout', () => isDrawing = false);
+</script>
+
+<style>
+  html, body {
+    margin:0;
+  }
+</style>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Brighton Angular Developer</title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Font aswome -->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<script>src="validation.js"</script>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+<!--CSS -->
+<link rel="stylesheet" href="website2.css">
+<link rel="stylesheet" href="websiteForm.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top navbar-dark mr-auto bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0" style="font: 400 15px monospace;">
+    <li class="nav-item">
+    <a href="website2.html" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+    <a href="websiteDOMChristmasTree.html" class="nav-link" href="#aboutSection">DOM</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="#skillsSection">Jquery</a>
+    </li>
+    <li class="nav-item ">
+      <a href="websiteCanvas.html" class="nav-link" href="#portfolioSection">Canvas</a>
+      </li>
+    <li class="nav-item">
+    <a href="websiteAlgorithms.html" class="nav-link" href="#footerSection">Algorithms</a>
+    </li>
+    <li class="nav-item active">
+      <a href="websiteForm.html" class="nav-link" href="#footerSection">Forms</a>
+      </li>
+      <li class="nav-item">
+        <a href="websiteAJAX1.html" class="nav-link" href="#footerSection">AJAX</a>
+        </li>
+    </ul>
+    </div>
+    </nav>
+
+<div class="jumbotron jumbotron-fluid pt-8" style="background-image: none; background: white; height: 300px;">
+  <div class="container text-center">
+  <h3 class="about-head" style="font-weight: bold;">Form Validation training area</h3>
+  
+  </div>
+  
+  </div>
+  </div>
+
+<!--FORM STARTS ROW 1-->
+<div class="container container-fluid mt-1 text-white">
+<div class="formdescription text-center mt-2" style= "background: blue;">
+<h4 class="pt-4">1. Fires a welcome message with name of user.</h4>
+
+<form id="login" action="/login/" method="post">
+<div class="alertbox p-4" id="main"></div>
+<fieldset class="py-3">
+<label for="username">Username:</label>
+<input id="username" name="username" type="text">
+<input class="btn btn-lg btn-danger" value="Login" type="submit">
+</fieldset>
+</form>
+</div>
+</div><!-- END OF ROW -->
+
+<!--FORM STARTS ROW 2-->
+<div class="container container-fluid mt-4 text-white">
+  <div class="formdescription text-center mt-2" style= "background: red;">
+  <h4 class="pt-4">2. Change datatype of password to make text visable to user</h4>
+  
+  <form id="login" action="/login/" method="post">
+  <div class="alertbox p-4" id="main"></div>
+  <fieldset>
+    <label for="pwd">Password:</label>
+      <input type="password" id="pwd" name="pwd"><br>
+      <input class="my-2" type="checkbox" id="showPwd">
+      <label class="my-2" for="showPwd">show password</>
+  </fieldset>
+  </form>
+  </div>
+  </div><!-- END OF ROW -->
+
+  <!--FORM STARTS ROW 3-->
+  <div class="container container-fluid mt-4 text-white">
+    <div class="formdescription text-center mt-2" style= "background: green;">
+    <h4 class="pt-4">3. Email validation</h4>
+    <h3>
+    </h3>
+    <fieldset>
+    <input class="mt-3 mb-4" type="email" name="" placeholder="Please enter a valid email"><br>
+    <span style= "display:none;" class="h3 mb-3 p-3 message success">Valid email</span>
+    <span style= "display:none;" class="h3 mb-3 m-3 p-3 message error">Invalid email</span>
+    </fieldset>
+    </form>
+    </div>
+    </div><!-- END OF ROW -->
+
+  <!--FORM STARTS ROW 4-->
+  <div class="container container-fluid mt-4 text-white pb-4 mb-4">
+    <div class="formdescription text-center mt-2" style= "color: black; background: yellow;">
+      <h4 class="pt-4 mb-3">4. Populate a selection box based on user input</h4>
+      <form name="howHeard" id="howHeard" action="/heard" method="post">
+          <fieldset>
+              <label class="mb-3" for="equipmentType">Type of training</label>
+              <select id="equipmentType" name="equipmentType">
+                <option value="choose">Please choose...</option>
+                <option value="vert">Vertical Jump training</option>
+                <option value="bouldering">Bouldering</option>
+              </select><br>
+              <label class="mb-4 pr-3" for="model">Type of equiptment needed</label>
+              <select id="model" name="model"><option>Choose a piece of equiptment..</option><option value="kodak">Kodak Instamatic M55</option><option value="bolex">Bolex Sound 715</option><option value="eumig">Eumig Mark S</option><option value="sankyo">Sankyo Dualux</option></select>
+          </fieldset>
+      </form>
+    </div>
+    </div><!-- END OF ROW -->
+
+
+<script>
+//FOR OLD IE//
+// Helper function to add an event listener
+function addEvent (el, event, callback) {
+  if ('addEventListener' in el) {                  // If addEventListener works
+    el.addEventListener(event, callback, false);   // Use it
+  } else {                                         // Otherwise
+    el['e' + event + callback] = callback;         // CreateIE fallback
+    el[event + callback] = function () {
+      el['e' + event + callback](window.event);
+    };
+    el.attachEvent('on' + event, el[event + callback]);
+  }
+}
+// Helper function to remove an event listener
+function removeEvent(el, event, callback) {
+  if ('removeEventListener' in el) {                      // If removeEventListener works
+    el.removeEventListener(event, callback, false);       // Use it
+  } else {                                                // Otherwise
+    el.detachEvent('on' + event, el[event + callback]);   // Create IE fallback
+    el[event + callback] = null;
+    el['e' + event + callback] = null;
+  }
+}
+
+//______________________________________________________________________________
+//NUMBER 1 Very basic welcome alert when you log in.
+
+(function(){
+// Get form element
+var form1 = document.getElementById('login');
+// When user submits form
+addEvent(form1, 'submit', function(e) {
+e.preventDefault();                              // Stop it being sent
+var elements = this.elements;                    // Get all form elements
+var username = elements.username.value;          // Select username entered
+var msg      = 'Welcome ' + username;            // Create welcome message
+document.getElementById('main').innerHTML = msg; // Write welcome message
+});
+}());
+
+// ______________________________________________________________________________
+// NUMBER 2 Very basic welcome alert when you log in.
+(function() {
+
+var pwd = document.getElementById('pwd');     // Get password input
+var chk = document.getElementById('showPwd'); // Get checkbox
+
+addEvent(chk, 'change', function(e) {         // When user clicks on checkbox
+  var target = e.target || e.srcElement;      // Get that element
+  try {                                       // Try the following code block
+    if (target.checked) {                     // If the checkbox is checked
+      pwd.type = 'text';                      // Set pwd type to text
+    } else {                                  // Otherwise
+      pwd.type = 'password';                  // Set pwd type to password
+    }
+  } catch(error) {                            // If this causes an error
+    alert('This browser cannot switch type'); // Say that cannot switch type
+  }
+});
+
+}());
+
+// ______________________________________________________________________________
+// NUMBER 3 Email regex 
+$(function(){
+
+var regExp = /^([\w\.\+]{1,})([^\W])(@)([\w]{1,})(\.[\w]{1,})+$/;
+
+$('[type="email"]').on('keyup', function() {
+  $('.message').hide();
+  regExp.test( $(this).val() ) ? $('.message.success').show() : $('.message.error').show();
+});
+
+});
+
+// ______________________________________________________________________________
+// NUMBER 4 Select all Checkboxes 
+(function() {
+  var type  = document.getElementById('equipmentType');// Type select box
+  var model = document.getElementById('model');        // Model select box
+  var vertGear = {                                      // Object stores cameras
+    Weights: 'Squat rack',
+    Plymometrics: 'Box Jump',
+    SQA: 'Agility ladder'
+  };
+  var climbGear = {                                  // Store projectors
+    shoes: 'Climbing shoes',
+    chalk: 'Chalk',
+    harness: 'Harness',
+    sankyo: 'Door frame to hang off!'
+  };
+
+  // WHEN THE USER CHANGES THE TYPE SELECT BOX
+  addEvent(type, 'change', function() {
+    if (this.value === 'choose') {                // No selection made
+      model.innerHTML = '<option>Please choose a type first</option>';
+      return;                                     // No need to proceed further
+    }
+    var models = getModels(this.value);           // Select the right object
+
+    // LOOP THROUGH THE OPTIONS IN THE OBJECT TO CREATE OPTIONS
+    var options = '<option>Choose a piece of equiptment</option>';
+    var key;
+    for (key in models) {                     // Loop through models
+      options += '<option value="' + key + '">' + models[key] + '</option>';
+    } // If an option could contain a quote, key should be escaped (see pXXX)
+    model.innerHTML = options;                    // Update select box
+  });
+
+  function getModels(equipmentType) {
+    if (equipmentType === 'vert') {            // If type is cameras
+      return vertGear;                             // Return cameras object
+    } else if (equipmentType === 'bouldering') {  // If type is projectors
+      return climbGear;                          // Return projectors object
+    }
+  }
+}());
+
+
+</script>
+
+
+
+</body>
+</html>

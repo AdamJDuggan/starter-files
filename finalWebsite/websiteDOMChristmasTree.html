@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Brighton Web Developer</title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Font aswome -->
+
+
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+<!--CSS -->
+<link rel="stylesheet" href="website2.css"><!--Main CSS page-->
+<link rel="stylesheet" href="websiteDOMChristmasTree.css"> <!--CSS for this page only-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+
+
+
+  <!-- return back button -->
+<a href="website2.html"><button type="button" class="btn btn-warning btn-lg btn-block">Return to Home screen</button></a>
+
+<!-- Christmas banner -->
+<div class= "christmas jumbotron jumbotron-fluid" style= "background-image: url('images/christmas2.jpg'); back;">
+
+<!--List creator--> 
+<div class="listContainer">
+<h1 class="about-head pl-4">Christmas DOM Tree<br>Add your name then create your Christmas present gift list</h1>
+<hr>
+  <button class="btn btn-warning m-3" id="toggleList">Hide list</button>
+  <div class="list p-3">
+    <button class="description btn btn-primary p-2">Enter your name then click me...</button>
+    <input type="text" class="description m-3">
+    <div class="py-4">
+    <p class="description h1 p-2"></p>
+    <ul class="ul h3 p-2">
+    </ul>
+  </div>
+    <input type="text" class="addItemInput m-4">
+    <button class="addItemButton btn btn-warning m-4">Add present idea</button>
+    <button class="removeItemButton btn btn-danger m-4">Remove last item</button>
+    <button id="submit" class="btn btn-info m-4">Send list to Santa!</button>
+
+  </div>
+</div>
+
+</div>
+<script src="dom2.js"></script>
+
+</body>
+</html>
