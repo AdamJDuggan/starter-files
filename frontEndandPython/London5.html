@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document Manipulation</title>
+  <style>.magic{background-color: red;} .magic2{color: white}</style>
+</head>
+<body>
+  <div id="id1">
+    <ul id="numbers">
+      <li>One</li>
+      <li>Two</li>
+    </ul>
+  </div>
+  <li id="outofdiv">Three</li>
+<script>
+//move element
+document.querySelector("ul").appendChild(document.getElementById("outofdiv"));
+//add element and content
+document.querySelector("#id1").appendChild(document.createElement("p")).appendChild(document.createTextNode("Hi"));
+//delete a child by finding a parent and removing its child
+document.querySelector("#numbers").parentNode.removeChild(document.querySelector("#numbers"));
+//find the id1 div and give it a class called magic
+document.querySelector('#id1').className += "magic"
+//gives the id1 a 2nd class of magic2
+document.querySelector('#id1').className += " magic2"
+document.querySelector('#id1').classList.remove("magic2")
+//set attribute to id1 of role and main
+document.querySelector('#id1').setAttribute("role", "main")
+document.write(document.querySelector('#id1').getAttribute("role"))
+document.querySelector('#id1').removeAttribute("role", "main")
+//change content of the p
+document.querySelector('p').innerHTML = "<b>Content Manipulation</b>"
+document.querySelector('p').style.fontStyle = "italic"
+</script>
+</body>
+</html>

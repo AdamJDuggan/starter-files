@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Classes</title>
+</head>
+
+<script>
+
+function Employee(name, age){
+  var _name = name;
+  var _age = age;
+
+  Object.defineProperty(this, "age",{
+    get:function(){
+      return _age;
+    },
+    set: function(value){
+      if (value < 1 || value > 100)
+        alert("Invalid age")
+      else {
+          _age = value
+      }
+  })
+  Object.defineProperty(this, "name", {
+    get:function(){
+      return _name;
+    }
+  })
+}
+</script>
+
+
+</html>

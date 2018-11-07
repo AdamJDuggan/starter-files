@@ -1,0 +1,126 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  display: block;
+  width:100;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.nav{
+ background-color:white;
+ color: black;
+ list-style: none;
+ text-align: right;
+ padding: 10px 0 0 0;
+}
+.nav> li{
+  display: inline-block; /*items in line not on top of each other*/
+  padding-right: 50px;
+  font-size: 16px;
+}
+.nav > li > a{
+  text-decoration: none;
+  color: black;
+}
+.nav> li> a:hover{
+  color: #c1c1c1;
+}
+.logo{
+  color: black;
+  float: left;
+  padding-left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.logo > a{
+  text-decoration: none;
+  color: black;
+}
+
+div.image{
+  width: 100%;
+  display: block;
+}
+
+<!--Copyright foot cs -->
+.clearfix:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.float.left{
+    float:left;
+}
+.float.right{
+    float:right;
+}
+
+div.block img{
+  height: 460px;
+  width: 100%;
+}
+
+div.container{
+  max-width: 1200px;
+  padding: 0 10px;
+  margin: 0 0 20px 0;
+  border: 10px solid #000000;
+  border-top: 20px;
+  box-sizing: border-box;
+}
+footer{
+  display: block;
+  width: 100%;
+}
+footer div.copyright{
+  display: block;
+  width: 100%;
+  background-color: black;
+  padding: 30px;
+}
+footer div.copyright div.text{
+    color:white;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 16px;
+}
+footer div.copyright ul.links{
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+footer div.copyright li{
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+}
+
+footer div.copyright li a{
+  color: white;
+  font-size: 40px;
+  margin-left: 10px;
+  padding-right: 3px;
+  line-height: 1em;
+}
+
+@media all and(max-width:768px){
+float.left, float.right{
+    float: none;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  footer div.copyright li a{
+      margin-left: 0px;
+      margin: 0 3px;
+  }
+}
+
+.div, .block, .welcome{
+  border: 2px solid black
+  text-align: center;
+  align: center;
+}

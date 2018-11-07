@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Adv JS1</title>
+</head>
+<body>
+<p id="firstp"><b>This is a paragraph element</b></p>  //ID is only identified server side//
+<h3>This is a heading</h3>
+<span class="test" name="sp">this is an element with a span test</span> //use name="sp" when getting info for server//
+<h2 class="test">this is also an element with class test</h2>
+<h3>this is another h3</h2>
+
+  <script>
+
+  alert(document.getElementById("firstp").innerHTML) //innerHTLM gets the element from firstp//
+    document.write(document.getElementById("firstp").innerText) //does not pull formatted. Strips tags.//
+    var x = document.getElementsByTagName("h3")
+    for (var i = 0; i < x.length; i++){
+      x[i].style.color = "red";
+    }
+
+    var c = document.getElementsByClassName("test")
+    for (var x=0; x < c.length; x++){
+      c[x].style.color = "green";
+    }
+
+    var c = document.getElementsByName("sp")
+    for (var x=0; x < c.length; x++){
+      c[x].style.color = "blue";
+    }
+
+  </script>
+
+</body>
+</html>

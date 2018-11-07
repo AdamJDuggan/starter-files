@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Image Gallery</title>
+  <style>
+    .thumb{
+      height: 100px;
+      width: 100px;
+      border: 3px solid grey;
+      cursor: default;}
+  </style>
+</head>
+<body>
+  <img height= "440px" width="440px" padding="5px" style="3px solid grey" src="images/Ludwig.png" id="mainImage"/>
+  <br/>
+    <p id="desc">
+
+  </p>
+  <div id="thumbDiv">
+    <img class="thumb" src="images/Larry.png" alt = "Larry"/>
+    <img class="thumb" src="images/Lemmy.png" alt = "Larry"/>
+    <img class="thumb" src="images/Iggy.png" alt = "Larry"/>
+    <img class="thumb" src="images/Roy.png" alt = "Larry"/>
+    <img class="thumb" src="images/Morton.png" alt = "Larry"/>
+    <img class="thumb" src="images/Wendy.png" alt = "Larry"/>
+    <img class="thumb" src="images/Ludwig.png" alt = "Larry"/>
+  </div>
+
+<script>
+  var thumbs = document.querySelector("#thumbDiv").querySelectorAll('img');
+  for (var i = 0; i < thumbs.length; i++){
+    thumbs[i].addEventListener("mouseover", function(){
+      this.style.cursor = "pointer";
+      this.style.borderColor = "red";
+    })
+    thumbs[i].addEventListener("mouseout", function(){
+      this.style.cursor = "default";
+      this.style.borderColor = "grey";
+    })
+  }
+  //this is bubling up because img is child of thumb div
+  document.querySelector("#thumbDiv").addEventListener("click", function(event){
+    //first bit for modern brousers. window.event for older brousers
+    event == event || window.event;
+    var targetElement = event.target || event.srcElement
+    //if target is img not the whole div but a single img then change the source of the MAIN image
+    if(targetElement.nodeName == "IMG")
+    document.querySelector("#mainImage").src = targetElement.getAttribute("src")
+    document.querySelector('p').innerHTML=targetElement.getAttribute('alt')
+  })
+
+</script>
+
+</body>
+</html>

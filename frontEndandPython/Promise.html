@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>API callbacks</title>
+</head>
+
+<script>
+var pr = new Promise(function(resolve, reject){
+  setTimeout(function(){
+    resolve(2+2)
+  }, 5000)
+})
+</script>
+
+<script>
+var json_data = '{"id": 1, "name":"jayan"}'
+var promise = new Promise(function(resolve, reject){
+  resolve(JSON.parse(json_data))
+})
+pr.then(function(value){
+  console.log(value)
+})
+promise.then(function (responce){
+  console.log("id: " + responce.id + " name: " + responce.name)
+})
+</script>
+
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Form Row</title>
+</head>
+<body>
+  <div class="formRow">
+    <textarea cols="40" rows="6" names="notes" class="validated" maxlength="1000"></textarea>
+    <span class="textCount"></span>
+  </div>
+
+<script>
+    document.querySelector("textarea").addEventListener("keyup", function(e){
+    var alphabets = this.value.length;
+    document.querySelector("span").innerHTML = alphabets;
+  })
+</script>
+
+</body>
+</html>

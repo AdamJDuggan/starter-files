@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Function 1</title>
+</head>
+
+<script>
+// function sumNumbers(){
+//   document.write("number of numbers is " + arguments.length + "<br/>")
+//   var sum = 0;
+//   for (var i = 0; i < arguments.length; i++){
+//     sum += arguments[i];
+//   }
+//   return sum;
+// }
+// document.write(sumNumbers(5, 10, 2, 11));
+// </script>
+<script>
+  function sortValues(){
+    return array.from(arguments).sort(function(a, b){
+      return a - b;
+    })
+  }
+  document.write(sortValues(100, 2, 15, 5))
+</script>
+
+</body>
+</html>

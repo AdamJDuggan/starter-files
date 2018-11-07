@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Traversing Elements</title>
+</head>
+<body><ul class="items"><li>One</li><li>Two</li><li>Three</li></ul><p>Hi</p>
+  <!--check node type -->
+<script>
+  for (var n = 0; n < document.body.childNodes.length; n++){
+    alert(document.body.childNodes[n].nodeName + " " + document.body.childNodes[n].nodeType)
+    switch (document.body.childNodes[n].nodeType){
+
+      case 1:
+        alert("This is a tag")
+        if (document.body.childNodes[n].hasAttribute('class')){
+          alert(document.body.childNodes[n].getAttribute('class'))
+        }
+        break;
+
+      case 2:
+        alert("this is an attribute")
+        break;
+
+      case 3:
+      alert("this is an whitespace")
+      break;
+
+      case 8:
+      alert("this is an comment")
+      break;
+  }
+}
+</script>
+
+</body>
+</html>

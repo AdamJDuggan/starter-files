@@ -1,0 +1,22 @@
+/* Attribute Selectors ------------- */
+
+//will target forms elements with the class of form-selector//
+form[class = "form-contact"]{
+  padding: 20px 24px;
+  background: #f4f7f8;
+}
+
+div[id = "container"]{
+  max-width: 500px;
+  margin: auto;
+}
+a[target= "_blank"]{
+  color: #39aad1;
+  text-decoration: none;
+  border-bottom: 1px dotted;
+}
+
+//Dry classes
+.br{
+  border-radius: .5em;
+}

@@ -1,0 +1,17 @@
+//always enter perramater to inner function//
+
+<button id="increment">Increment</button>
+<script>
+  var cf = (function outer(){
+    var i = 1;
+    function inner(){
+      return i++;
+    }
+    return inner;
+  })()
+
+document.querySelector("#increment").addEventListener("click", function(){
+  alert(cf(4));
+})
+
+</script>

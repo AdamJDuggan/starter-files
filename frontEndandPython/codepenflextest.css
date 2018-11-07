@@ -1,0 +1,18 @@
+/**** flex-grow ****/
+.item {
+  height: 20rem;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+}
+.example-grow .parent {
+  display: flex;
+  width: 100%;
+}
+.example-grow .item {
+  width: 35%;
+}
+.example-grow .item:nth-child(1) {
+  flex-grow: 2;
+  background: lightgreen;
+}

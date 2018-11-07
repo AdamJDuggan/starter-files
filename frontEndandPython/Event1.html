@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Event Bubling</title>
+</head>
+<body>
+<div>
+  <span>
+    <button>Click me</button>
+  </span>
+</div>
+
+//bubling triggers up the tree. Capturing goes down the chain//
+
+<script>
+document.querySelector("button").addEventListener("click", function (e){
+  alert("button is clicked")
+  // e.stopPropagation()
+})
+
+document.querySelector("div").addEventListener("click", function (){
+  alert("div is clicked")
+})
+
+document.querySelector("span").addEventListener("click", function (e){
+  alert("span clicked")
+})
+</script>
+
+</body>
+</html>

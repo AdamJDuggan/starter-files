@@ -1,0 +1,17 @@
+<a href="#">Red</a>
+<a href="#">Green</a>
+<a href="#">Blue</a>
+<a href="#">Black</a>
+
+<script>
+  var links = document.querySelectorAll("a")
+  for (var i = 0; i < links.length; i++){
+    function(){
+      var c = i;
+      links[c].addeventListener("click", function(){
+        document.body.style.background = links[c].innerText
+      })
+    })()
+  }
+
+</script>

@@ -1,0 +1,94 @@
+/* =================================
+  Page Styles
+==================================== */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+  background: #FFF;
+  text-align: center;
+  font: 1.15em/1 'Open Sans', sans-serif;
+  color: #FFF;
+}
+
+.wrapper{
+  background-color: #F5F5F5;
+  height: 100%;
+}
+
+.container {
+	display: flex;
+	background: white;
+	width: 100%;
+  border-radius: 5px;
+}
+.item {
+	color: #fff;
+}
+
+.NAVcontainer{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.NAVitem{
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: auto;
+}
+
+.imgcen{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-content: center;
+}
+
+
+
+/* =================================
+  Flexbox
+==================================== */
+.welcomearea{
+  height: 300px;
+}
+
+.item {
+  width: 30%;
+  align-content: center;
+}
+.container .item:nth-child(1) {
+  flex-grow: 2;
+}
+
+/* This is the simplist way to center content */
+.item {
+	margin:auto;
+	}
+
+  /* =================================
+    Media queries
+  ==================================== */
+
+@media all and (max-width: 500px){
+
+h2{
+  font-size: .8em;
+}
+
+.item{
+  height: 100%;
+}
+  img{
+    min-width: 90px;
+    min-width: 90px;
+
+  }
+}

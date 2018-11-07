@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JQuery callbacks</title>
+</head>
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<script>
+  $(document).ready(function(){
+  $("li.title").click(function(){
+      $("li.child").each(function(index){
+        $(this).hide();
+      });
+      $(this).next("li.child").css("border", "2px solid red").slideDown()
+  })
+  })
+</script>
+
+<style>
+li.child{
+  display: none;
+  liist-style-type: none;
+  margin-left: 20px;
+}
+.title{
+  font-weight: bold;
+  text-transform: uppercase;
+}
+</style>
+
+<ul>
+  <li class="title">Introduction</li>
+  <li class="child">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
+  <li class="title">Objective</li>
+  <li class="child">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+/* =================================
+  Page Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+body {
+	font-size: 1.35em;
+	font-family: 'Varela Round', sans-serif;
+	color: #fff;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+p {
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+.container2 {
+ display: flex;
+ flex-wrap: wrap;
+ flex-direction: row;
+
+.container2 {
+	margin-top: 0;
+	width: 100%;
+	background: ;
+  border-radius: 1px;
+  box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
+}
+.item{
+	padding: 15px;
+	margin: 5px;
+	background: white;
+	border-radius: 3px;
+}
+
+.item img{
+	max-width: 350px;
+	max-height: 350px;
+}
+
+
+@media all and (max-width: 650px){
+	.item img{
+		max-width: 200px;
+		max-height: 200px;
+	}
+}
+
+/* =================================
+  FIRST Flexbox LESSON
+==================================== */
+
+
+/*
+display-flex creates a l-r block container with nav items on row
+display- inline-flex fills the area l-r (makes background
+white space move in)
+flex-direction: row or coloum reverse
+*/
+
+/* .container {
+	display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; //Places item at start, center ect of line//
+}
+
+.item{
+  flex-grow: 1;
+}
+
+.item-1{
+  flex-grow: 4;
+} */
+
+/* Item 3 will get twice the space than the others */
+/* .item-3{
+  flex-grow: 2;
+} */
+
+/* this moves items 1 + 2 to the left side of bar
+.item-2 {
+  margin-right: auto;
+} */
+
+/* you need a lower order value to move to front and visa versa. They have value of 0 by default.   */
+/* .item-6{
+  order: -1;
+} */
+
+
+
+/* =================================
+  Flexbox PART 2
+==================================== */
+
+/* .container {
+	display: flex;
+	flex-wrap: wrap;
+  height: 400px;
+  flex-basis: 200px;
+  justify-content: space-around;
+  /* align-items: center; */
+/* } */
+
+/* .item-1{
+  align-self: flex-end;
+}
+
+.item{
+  flex-grow: 1;
+  /* flex-basis: 200px;  */
+  /* Items will display at equal size when 200px
+} */

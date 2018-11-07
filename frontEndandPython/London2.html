@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Traversing Elements</title>
+</head>
+<body><ul class="items"><li>One</li><li>Two</li><li>Three</li></ul><p>Hi</p>
+  <script>
+
+    alert(document.documentElement) //retrieves documentelement
+    alert(document.documentElement.nodeName) //retrieves nodeName of a given element
+    alert(document.body.children.length) //length of children nodes
+  for (var n = 0; n < document.body.children.length; n++){
+    alert(document.body.children[n].nodeName)
+  }
+  alert(document.body.childNodes.length)
+  for (var n = 0; n < document.body.childNodes.length; n++){   //childNodes includes white spaces
+    alert(document.body.childNodes[n].nodeName)
+  }
+
+  document.body.firstChild.style.border = "1px solid blue"
+  document.body.childNodes[1].style.border = "1px solid red" //
+  document.body.childNodes[1].parentNode.style.background = "green"  //body is the parent of p so whole page is green
+
+  </script>
+
+</body>
+</html>

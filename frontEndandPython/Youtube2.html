@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>
+ </title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+ <link rel="stylesheet" type="text/css" href="css_jquery_index.css">
+ <style>.panel-button{width: 300px; height: 300px;}</style>
+</head>
+<body>
+
+<div class="container">
+ <div class="jumbotron">
+  <h1>JQery exercises</h1>
+  <!-- create your own HTML attribute with data-panel -->
+  <button class="panel-button" data-panelid="panel1">#btn1</button>
+  <button class="panel-button" data-panelid="panel2">#btn2></button>
+  <button class="panel-button" data-panelid="panel3">#btn3></button>
+  <button class="panel-button" data-panelid="panel4">#btn4></button>
+ </div>
+
+ <div class="row">
+  <div class="col-xs-3">
+   <div id="panel1" style= "display: none" class="panel panel-primary">
+    <div class="panel-heading">#panel1 </div>
+    <div class="panel-body"> content</div>
+   </div>
+  </div>
+
+  <div class="col-xs-3">
+   <div id="panel2" style= "display: none" class="panel panel-primary">
+    <div class="panel-heading">#panel2 </div>
+    <div class="panel-body">content </div>
+   </div>
+  </div>
+
+  <div class="col-xs-3">
+   <div id="panel3" style= "display: none" class="panel panel-primary">
+    <div class="panel-heading">#panel3 </div>
+    <div class="panel-body"> content</div>
+   </div>
+  </div>
+
+  <div class="col-xs-3">
+   <div id="panel4" style= "display: none" class="panel panel-primary">
+    <div class="panel-heading">#panel4 </div>
+    <div class="panel-body">content </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+<script src="bower_components/jquery.js"></script>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+
+<script>
+
+$(function(){
+$(".panel-button").on('click', function(){
+var panelId = $(this).attr('data-panelId');
+$("#" + panelId).toggle();
+});
+});
+
+</script>
+
+</body>
+</html>﻿

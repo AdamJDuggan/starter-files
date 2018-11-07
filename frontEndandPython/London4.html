@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document Manipulation</title>
+</head>
+<body>
+  <div id="id1">
+
+  </div>
+
+<script>
+document.querySelector("#id1").appendChild(document.createElement("div"))
+//creates an element and append it to an existing one//
+document.getElementById("id1").insertAdjacentHTML('beforeBegin', '<div id="addednow"></div>');
+//add element before
+document.getElementById("id1").insertAdjacentHTML('afterEnd', '<div id="addedend"></div>');
+//add element as first child
+document.getElementById("id1").insertAdjacentHTML('afterBegin', '<div id="child"></div>');
+//add element as last child
+document.getElementById("id1").insertAdjacentHTML('beforeEnd', '<div id="last-child"></div>');
+
+
+
+</script>
+
+</body>
+</html>

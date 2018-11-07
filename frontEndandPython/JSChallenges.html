@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+ <head>
+ <meta charset = "UTF-8">
+ <title>textBoxes.html</title>
+ </head>
+
+ <body>
+
+ <h1>Text Box Input and Output</h1>
+ <form action = "">
+  <fieldset>
+  <label>Type your word: </label>
+  <input type = "text" id = "InputWord" />
+  <input type = "button" value = "click me" onclick = "reverseFunc()"/>
+  <input type = "text" id = "txtOutput" />
+  </fieldset>
+ </form>
+
+ <script>
+  function reverseString(str){
+    // var strArr = str.split("");
+    // var reverseStrArr = strArr.reverse();
+    // var reversedString = reverseStrArr.join("");
+    // return reversedString
+    return str.split("").reverse.().join("");
+  };
+  reverseString("Hello");
+ </script>
+
+ </body>
+</html>

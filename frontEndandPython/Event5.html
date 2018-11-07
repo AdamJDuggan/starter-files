@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Key Detection</title>
+</head>
+<body>
+  <p>Press a character key, with or without holding down the CTRL key.<br/>
+  You can also use the SHIFT key together with the CTRL key.</p>
+
+<script>
+    document.querySelector("body").addEventListener("keypress", function(e){
+      alert(
+        "key pressed: " + String.fromCharCode(e.charCode) + "\n" +
+        "charCode: " + e.charCode + "\n" +
+        "CTRL key pressed: " + e.shiftKey + "\n"
+      );
+  })
+</script>
+
+</body>
+</html>

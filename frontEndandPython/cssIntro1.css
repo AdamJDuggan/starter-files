@@ -1,0 +1,289 @@
+/* Base Styles -------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%
+  color: #878787;
+  margin: 0;
+  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 4.9rem; /* 90px/16px  */
+  font-family:monospace;
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  font-weight: ;
+  line-height: 1.8;
+  text-shadow: 0 1px 1px rgba(0,0,0,.8);
+  text-align: center;
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 3.3125em; /* 53px/16px  */
+  font-weight: normal;
+  line-height: 1.1;
+  margin: 0 0 .5em; /* 0 0 26px */
+}
+
+h3 {
+  font-size: 1.25em; /* 20px/16px  */
+  color: #48525c;
+  line-height: 1.2;
+  margin-bottom: 1.7em; /* 34px */
+}
+
+img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+
+
+/* Pseudo-classes ------------------ */
+
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: lightblue;
+}
+
+a:hover {
+  color: grey;
+}
+
+a:active {
+  color: lightcoral;
+}
+
+/* Main Styles --------------------- */
+
+.main-header {
+  padding-top: 170px;
+  height: 550px;
+
+  background:
+              linear-gradient(#ffa949, transparent 90%),
+              linear-gradient(0deg, #fff, transparent),
+              #ffa949 url(rockies.jpg) no-repeat center;
+
+  background-size: cover;
+}
+
+.title {
+  color: white;
+  font-size: 1.3rem; /* 26px/16px */
+  margin-top: 10px;
+}
+
+.intro {
+  font-size: 1.25em; /* 20px/16px */
+  line-height: 1.2;
+}
+/* -----END OF ALL */
+
+/* Nav bar */
+.nav{
+ background-color:white;
+ color: black;
+ list-style: none;
+ text-align: right;
+ padding: 40 0 40 0;
+ margin-top: 10px;
+ margin-bottom: 10px;
+}
+.nav> li{
+  display: inline-block; /*items in line not on top of each other*/
+  padding-right: 50px;
+  font-size: 16px;
+}
+.nav > li > a{
+  text-decoration: none;
+  color: black;
+}
+.nav> li> a:hover{
+  color: #c1c1c1;
+}
+.logo{
+  color: black;
+  float: left;
+  padding-left: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 80px;
+}
+
+.logo > a{
+  text-decoration: none;
+  color: black;
+  margin-bottom: 50%;
+}
+div.image{
+  width: 100%;
+  display: block;
+}
+
+/* I AM A SELF TAUGHT... */
+.primary-content {
+	padding-top: 25px;
+  padding-bottom: 95px;
+}
+/* END OF I AM SELF... */
+
+.crop li img{
+  display: inline-block;
+  overflow: hidden;
+  width: 100px;
+  align: center;
+}
+
+
+ul{
+  list-style-type: none;
+}
+
+
+
+/* Layout Styles ------------------ */
+
+.primary-content{
+  width: 75%;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: auto;
+  max-width: 960px;
+  text-align: center;
+}
+
+.portfolio {
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  text-decoration-color: blue;
+  padding: 18% 24%;
+  margin: 125px 0 60px;
+  background: url('wedding.jpg') no-repeat center;
+  background-size: cover;
+}
+
+/* Image Columns ------------------ */
+.crop li{
+    display: inline-block;
+    object-fit: scale-down;
+    overflow: hidden;
+    height:40px;
+    width: 40px;
+    align: center;
+}
+
+
+/* Float Clearfix ------------------ */
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.clearfix:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.float.left{
+    float:left;
+}
+.float.right{
+    float:right;
+}
+
+div.block img{
+  height: 460px;
+  width: 100%;
+}
+
+div.container{
+  max-width: 1200px;
+  padding: 0 10px;
+  margin: 0 0 20px 0;
+  border: 10px solid #000000;
+  border-top: 20px;
+  box-sizing: border-box;
+}
+
+
+
+/* FOOTER */
+footer{
+    position: absolute;
+    width: 100%
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height:1px;
+}
+
+footer div.copyright{
+  display: block;
+  width: 100%;
+  background-color: black;
+  padding: 20px;
+  margin-top: 5px;
+}
+footer div.copyright div.text{
+    color:white;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 16px;
+}
+footer div.copyright ul.links{
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+footer div.copyright li{
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  list-style-type: none;
+}
+
+footer div.copyright li a{
+  color: white;
+  font-size: 40px;
+  margin-left: 10px;
+  padding-right: 3px;
+  line-height: 1em;
+}
+
+
+
+
+/* Media querys */
+@media(max-width: 1024px){
+  .primary-content, .t-border, .portfolio, .crop{
+    width: 90%}
+}
+
+@media(max-width: 768px){
+  .primary-content, .t-border, .portfolio, .crop, .footer{
+    width: 100%
+    padding: 20px;
+    border: none;
+  }
+
+  .main-header{
+    max-height: 380px;
+    padding: 50px 25px 0;
+    }
+  .footer{
+    padding: 20px 0;
+  }
+  }

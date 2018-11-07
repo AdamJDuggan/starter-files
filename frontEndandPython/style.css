@@ -1,0 +1,25 @@
+body{
+    font-family: "Consolas", "Trebuchet MS";
+}
+.nav-item{
+  padding-left:2rem;
+}
+
+.jumbotron {
+    margin-bottom: 0px;
+    background-image: url(pdx.jpg);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: black 0.3em 0.3em 0.3em;
+}
+
+.btn{
+  padding--left: 3rem;
+}
+.python{
+  padding-right: 0;
+  max-width: 400px;
+
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Event Capturing</title>
+</head>
+<body>
+<div id="bd">
+    <button>Click me</button>
+    <a href="http://www.google.com">remove event</a>
+</div>
+
+<script>
+//when you use onClick it overrides the previous fuctions so here will alert 2+3
+  var b = document.querySelector("button")
+  b.onclick = function(){
+    alert("event 1")
+  }
+  b.onclick = function(){
+    alert("event 2 event 3")
+  }
+  //capture and to work with remove Listener
+  b.addEventListener("click", firstEvent = function(){
+    alert("Hi")
+  }, false)
+
+  //false means bubbling. True means capture. So here body clicked runs before Hi this
+  b.addEventListener("click", firstEvent = function(e){
+    alert("this")
+  }, false)
+
+  var body = document.querySelector("#bd")
+  body.addEventListener("click", function(e){
+    alert("body clicked")
+  }, true)
+
+  var a = document.querySelector("a")
+  a.addEventListener("click", function(e){
+    b.removeEventListener("click", firstEvent)
+    e.preventDefault()
+  })
+</script>
+
+</body>
+</html>

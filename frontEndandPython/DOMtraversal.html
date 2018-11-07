@@ -1,0 +1,48 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+ <title>
+ </title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+ <link rel="stylesheet" type="text/css" href="css_jquery_index.css">
+</head>
+<body>
+
+  <ul class="list">
+    <li>One</li>
+    <li class="special">Two</li>
+    <li>Three</li>
+    <li>
+      <ul class="sublist">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+      </ul>
+    </li>
+  </ul>
+
+<style>
+  .special{
+    color: blue;
+  }
+</style>
+
+<script>
+  $(function(){
+  $('li').on('click'), function(){
+    // when i click an item; the next item will hide
+    $this.next().hide();
+    // will make current selection black and siblings all blue
+    $this.removeClass('special');
+    $this.siblings.addClass('special');
+  }
+});
+
+</script>
+
+</body>
+</html>﻿

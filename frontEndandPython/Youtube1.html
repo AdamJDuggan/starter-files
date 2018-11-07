@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  </head>
+  <body>
+
+
+  <script>
+  // Dependancy Injection
+  var person = function(firstname, lastname){
+    this.firstname = firstname;
+    this.lastname = lastname;
+  }
+  // the logPerson function is dependant on the variable john.
+  // If you wanted to change something about John you would have
+  // to do it inside this function. This is not a good way.
+  function logPerson(){
+    var john = new person('John', 'Doe');
+    console.log(john);
+  }
+  logPerson();
+
+  // this is a better way using dependancy injection.
+  // Pass the object TO the function instead of creating
+  // the object inside the function. Log person is no longer
+  // dependant on the person variable
+  function logPerson(person){
+    var john = new person('John', 'Doe');
+    console.log(person);
+  }
+  logPerson(john);
+
+
+  </script>
+
+  </body>
+</html>

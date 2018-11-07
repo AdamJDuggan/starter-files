@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Key Detection</title>
+</head>
+<body>
+  <p>Please enter a number between 5 and 10</p>
+  <input id="demo" type="text"/>
+  <button type=button onclick="alert(myFunction())">Test Input</button>
+  <p id="message"></p>
+
+<script>
+function myFunction(){
+  var message, x;
+  message = document.getElementById("message");
+  message.innerHTML = "";
+  x = document.getElementById("demo").value;
+  try{
+    if (x == "") throw new Error("empty");
+    if (isNaN(x)) throw new Error ("not a number");
+    //converts string input into a number
+    x = Number(x);
+    if (x < 5) throw new Error ("to low");
+    if (x > 10) throw new Error ("to high");
+  }
+  catch(err){
+    message.innerHTML = "Input is " + err;
+    return false;
+  }
+  finally{
+    return "this gets called all the times";
+  }
+}
+</script>
+
+</body>
+</html>

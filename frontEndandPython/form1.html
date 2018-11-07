@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Sign Up Form</title>
+      <link rel="stylesheet" href="css/normalize.css">
+      <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="form1.css">
+  </head>
+  <body>
+
+    <form action="index.html" method="post">
+      <h1>Sign Up</h1>
+      <!-- Legends label parts of a field set -->
+      <legend><span class="number">1</span></span>Your basic info</legend>
+      <!-- the for label matches the id. Click and it jumps to the id. -->
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="user_name" />
+      <label for="name">Email:</label>
+      <input type="email" id="mail" name="user_email" />
+      <label for="name">Password:</label>
+
+      <!--With radio buttons you can only choose one becuase they
+      have the same name attribute-->
+      <label>Age:</label>
+      <input type="radio" id="under_13" name="user_age"/>
+      <label for="under_13" class="light">Under 13</label><br />
+      <input type="radio" id="under_13" name="user_age"/>
+      <label for="over_13" class="light">Over 13</label>
+
+      <!-- Main section  -->
+      <input type="password" id="password" name="user_password" />
+      <legend><span class="number">1</span></span>About you</legend>
+      <label for="name">About you:</label>
+      <textarea id="bio" name="user_bio"></textarea>
+
+      <!-- Choose one from long list. Break list into sections -->
+      <label for="job">Job role:</label>
+      <select id="job" name="user_job">
+      <optgroup label="web">
+        <option value="frontend_developer">Frontend Developer</option>
+        <option value="php_developer">PHP Developer</option>
+        <option value="">Java Developer</option>
+        <option value="rails_developer">Rails Developer</option>
+        <option value="wordpress_developer">PHP Developer</option>
+        <option value="java_developer">Java Developer</option>
+      </optgroup>
+      <optgroup label="mobile">
+        <option value="android_developer">Android Developer</option>
+        <option value="ios_developer">IOS Developer</option>
+        <option value="business_owner">Business Owner</option>
+      </optgroup>
+      </select>
+
+      <!-- Checklists
+      Label for group and label for individual options
+      Syntax is same as radio buttons. However, type attribute is set to
+      checkbox instead of radio -->
+      <label>Interests:</label>
+      <input type="checkbox" id="development" value="interest_development"
+      name="user_interest"><label class="light" for="development">
+      Development</label><br/>
+      <input type="checkbox" id="design" value="interest_development"
+      name="user_interest"><label class="light" for="design">
+      Design</label><br/>
+      <input type="checkbox" id="business" value="interest_development"
+      name="user_interest"><label class="light" for="business">
+      Business</label>
+      <button type="submit">Sign Up</button>
+
+    </form>
+
+
+  </body>
+</html>

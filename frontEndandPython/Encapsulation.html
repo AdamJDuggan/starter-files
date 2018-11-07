@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Classes</title>
+</head>
+
+<script>
+
+function Employee(firstname, lastname){
+  this.firstname = firstname;
+  this.lastname = lastname;
+
+
+  function getFullName(){
+    fullname = firstname + " " + lastname
+    return fullname
+  }
+  this.pGetFullName = function (){
+    return getFullName()
+  }
+}
+
+Employee.prototype.pBGetFullName = function(){
+  return this.pGetFullName()
+}
+
+var e1 = new Employee("David", "Cameroon")
+document.write("Using public function" + e1.pBgetFullName())
+document.write("</br>")
+document.write("Using priviliged function " + e1.pGetFullName())
+
+</script>
+
+
+</html>

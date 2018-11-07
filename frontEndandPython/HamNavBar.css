@@ -1,0 +1,271 @@
+/* colors -> https://coolors.co/e54b4b-ebebd3-464655-e4b363-e8e9eb */
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+body{
+  background: #F0F8EA;
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+html, body {
+  height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
+}
+
+/* =================================
+  NAV BAR
+==================================== */
+.navcontainer {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+header {
+  background: grey;
+  color: #EBEBD3;
+  padding: 0 0.1rem 1em 0;
+  position: relative;
+  height: 40px;
+}
+header::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+.logo {
+  float: left;
+  font-size: 1.6rem;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 10px;
+}
+.site-nav {
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  background: #464655;
+  padding: 1em 0;
+  clip-path: circle(0px at top right);
+  transition: clip-path ease-in-out 700ms;
+}
+.site-nav--open {
+  clip-path: circle(250% at top right);}
+.site-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.site-nav li {
+  border-bottom: 1px solid #575766;
+  font-size: 1em;
+  font-weight: 700;
+}
+.site-nav li:last-child {
+  border-bottom: none;
+}
+.site-nav a {
+  color: #EBEBD3;
+  display: block;
+  padding: 2em 4em 2em 1.5em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.site-nav a:hover,
+.site-nav a:focus {
+  background: #E4B363;
+  color: #464655;
+}
+.site-nav--icon {
+  display: inline-block;
+  font-size: 1.5em;
+  margin-right: 1em;
+  width: 1.1em;
+  text-align: right;
+  color: rgba(255,255,255,.4);
+}
+.menu-toggle {
+  padding: 1em;
+  position: absolute;
+  top: .5em;
+  right: .5em;
+  cursor: pointer;
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  display: block;
+  background: #EBEBD3;
+  height: 3px;
+  width: 1.75em;
+  border-radius: 3px;
+  transition: all ease-in-out 500ms;
+}
+.hamburger::before {
+  transform: translateY(-6px);
+}
+.hamburger::after {
+  transform: translateY(3px);
+}
+.open .hamburger {
+  transform: rotate(45deg);
+}
+.open .hamburger::before {
+  opacity: 0;
+}
+.open .hamburger::after {
+  transform: translateY(-3px) rotate(-90deg);
+}
+@media (min-width: 890px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .site-nav {
+    height: auto;
+    position: relative;
+    background: transparent;
+    float: right;
+    clip-path: initial;
+  }
+
+  .site-nav li {
+    display: inline-block;
+    border: none;
+  }
+
+  .site-nav a {
+    padding: 0;
+    margin-left: 3em;
+  }
+
+  .site-nav a:hover,
+  .site-nav a:focus {
+    background: transparent;
+  }
+
+  .site-nav--icon {
+    display: none;
+  }
+
+}
+@media (max-width: 280px) {
+    .logo{
+      font-size: .8em;
+    }
+}
+
+
+/* =================================
+  MAIN SECTION
+==================================== */
+p {
+	font-size: 2rem;;
+	line-height: 1.5;
+}
+
+
+/* THIS IS THE FLEXBOX TITLE BOX FOR GUESS THE GAME */
+.pshead{
+  margin: 45px auto;
+  width: 50%;
+  padding: 1px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+.container1 {
+  margin: 45px auto;
+  justify-content: center;
+  padding: 1px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
+ display: flex;
+ flex-wrap: wrap;
+}
+.fl {
+	color: black;
+	padding: 15px;
+	margin: 5px;
+	border-radius: 3px;
+}
+
+
+/*playstation images*/
+.fl img{
+  width: 300px;
+  height: 300px;
+}
+
+
+
+
+/* MARIO */
+
+
+
+
+
+/*FOOTER  */
+.containerf {
+	margin: 20px auto;
+  justify-content: center;
+	padding: 1px;
+	background: white;
+  border-radius: 5px;
+  box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
+}
+.icon {
+	color: black;
+	padding: 15px;
+	margin: 5px;
+	border-radius: 3px;
+}
+.containerf {
+	display: flex;
+	flex-wrap: wrap;
+}
+.icon img{
+  width: 100px;
+  height: 100px;
+}
+.icon-g img{
+  width: 120px;
+}
+ @media all and (max-width: 650px){
+  .fl img,
+  .mariopic img{
+  max-width: 70px;
+  max-height: 70px;
+  }
+  .icon img{
+    max-width: 70px;
+    max-height: 70px;
+  }
+
+  .fl-0,
+  .pshead,
+  .fl-0 p,
+  .pshead p {
+  font-size: 1em;
+  width: 90%;
+  }
+
+}

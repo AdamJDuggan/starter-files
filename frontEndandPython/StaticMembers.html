@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Static members</title>
+</head>
+
+<script>
+function VisitedPlaces(placeName){
+  this.placeName = placeName;
+  VisitedPlaces.count = ++VisitedPlaces.count || 1;
+  VisitedPlaces.ShowCount = function(){
+    return VisitedPlaces.count;
+  }
+}
+
+var p1 = new VisitedPlaces("London")
+var p2 = new VisitedPlaces("New York")
+var p3 = new VisitedPlaces("Paris")
+document.write("Number of places visited " + VisitedPlaces.ShowCount())
+
+
+
+</script>
+
+
+</html>

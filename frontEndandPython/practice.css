@@ -1,0 +1,260 @@
+*{
+  margin:0;
+  padding: 0;
+  font-family: 'verdana', sans-serif;
+}
+
+body{
+  background-color: black;
+  color: white;
+}
+
+ul{
+  list-style: none;
+}
+
+/* ---- Navigation ---- */
+
+.name {
+	font-size: 1.35em;
+	margin: 0;
+}
+.main-nav {
+	margin-top: 5px;
+}
+.name,
+.main-nav a {
+	text-align: center;
+	display: block;
+	padding: 10px 15px;
+}
+
+.main-nav li a {
+	font-size: 1.2em;
+	color: white;
+  list-style-type: none;
+  list-style: none;
+  padding: 15px;
+  border: 10px;
+}
+
+.main-nav a:hover {
+	color: #093a58;
+}
+
+
+
+
+/* banner section  */
+.banner{
+  background: url("i360.jpg");
+  width: 100%;
+  background-size: cover;
+}
+
+.banner-text{
+  display: flex;
+  padding: 15% 0;
+  border-bottom: solid 1px #663399;
+}
+
+.banner-text-items{
+  color: #fff;
+  margin: auto;
+  text-align: center;
+  width: 50%;
+}
+
+.banner-text-items h2{
+  font-size: 3em;
+  margin-bottm: 20px;
+  text-transform: uppercase;
+}
+
+.banner-text-items p{
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* main content */
+.container {
+	margin-top: 0;
+	width: 100%;
+	background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
+}
+.item {
+	color: #fff;
+	padding: 10px;
+	margin: 5px;
+	background: #3db5da;
+	border-radius: 3px;
+}
+
+.container {
+  padding: 30px 10px;;
+  font-size: 1.35em;
+	font-family: 'Varela Round', sans-serif;
+	color: #fff;
+	background: #e8e9e9;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+.container p {
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+
+
+/* =================================
+  FIRST Flexbox LESSON
+==================================== */
+.container {
+ display: flex;
+ flex-wrap: wrap;
+ flex-direction: row;
+
+/* contact sheet */
+.contact-items{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+
+
+.contact-items{
+  background: url('space.jpg');
+  background-size: cover;
+  padding: 80px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-items h2{
+  color: #fff;
+  font-size: 40px;
+  margin-bottom: 18px;
+}
+
+.contact-items input[type="text"]{
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 15px;
+  width: 40%;
+}
+
+.contact-items textarea{
+  border-radius: 10px;
+  height: 150px;
+  padding: 15px;
+  width: 40%;
+}
+
+.contact-items textarea{
+  border-radius: 10px;
+  height: 150px;
+  padding: 15px;
+  width: 40%;
+}
+
+.content:before{
+  position: apsolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5)
+}
+
+
+/* background: linear-gradient(black, transparent 90%),
+linear-gradient(0deg, #00001a, transparent); */
+
+@media all and (max-width: 500px){
+
+  .banner-text-items{
+    width: 90%;
+  }
+
+  .banner-text-items h2{
+    font-size: 1.5em;
+  }
+
+  .main-content{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+
+@media all and (max-width: 800px){
+
+  .banner-text-items{
+    width: 90%;
+  }
+
+  .banner-text-items h2{
+    font-size: 1.5em;
+  }
+
+  .main-content{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 769px) {
+	.main-header,
+	.main-nav{
+		display: flex;
+	}
+
+	.main-header{
+		 flex-direction: column;
+		 align-items: center;
+	}
+}
+
+
+
+@media (min-width: 1025px) {
+	.main-header{
+		flex-direction: row;
+		/* this is automatically putting name on
+		left edge of container and nav items on right side */
+		justify-content: space-between;
+	}
+
+}
+
+
+
+
+.submit{
+  padding-top: 25px;
+}
+
+.submit a{
+  color: white;
+  text-decoration: none;
+}

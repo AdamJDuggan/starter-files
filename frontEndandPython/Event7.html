@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Catching errors</title>
+</head>
+<body onload = "NestedEx()">
+
+<script>
+function NestedEx(){
+  try {
+    document.write("Outer try running...<br/>");
+    try{
+      document.write("Nested Try running...<br/>");
+      throw "an error";
+    }
+    catch (e){
+      document.write("Nested Catch caught " + "<b>" +e+"</b>" + "</br>");
+      throw new Error (301, "an error");
+    }
+    finally {
+      document.write("Nested is finally running...</br>");
+    }
+  }
+  catch (ex){
+    document.write("Outer catch caught " + ex.message + "</br>");
+  }
+  finally{
+    document.write("Outer finally running");
+  }
+}
+</script>
+
+</body>
+</html>
